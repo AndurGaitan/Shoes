@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; }
+
+.marcas img {
+  width: 50%;
+  border-radius: 70px; }
+
+.btn-Novo {
+  color: #fff;
+  background-color: #C1FF31;
+  border-color: #C1FF31; }
+
+.btn-sale {
+  color: #fff;
+  background-color: #9CCE28;
+  border-color: #9CCE28; }
+
+/*Navegador general*/
+.navbar-brand img {
+  width: 60px;
+  height: 60px; }
+
+.color-nav {
+  background-color: #F2F4F4; }
+
+/*Body home*/
+.bodyContenedor {
+  display: grid;
+  grid-template-areas: "header"
+ "main"
+ "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center; }
+
+.header {
+  grid-area: header; }
+
+.contenedorMain {
+  grid-area: main; }
+
+.footer {
+  grid-area: footer; }
+
+/*Main home*/
+.bienvenidosIndex {
+  text-align: center;
+  font-size: 0.6em;
+  margin: 10px 0px 50px 0px; }
+
+.todoProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center; }
+  .todoProducto .card {
+    border-style: none;
+    margin: 5px 7px 5px 70px; }
+  .todoProducto h3 {
+    text-align: center; }
+  .todoProducto img:hover {
+    transform: scale(1.2); }
+
+.tituloProductos {
+  text-align: center;
+  margin: 15px 0px 15px 0px; }
+
+.marcas {
+  display: none; }
+
+.tituloMarcas {
+  display: none; }
+
+/*Footer*/
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #F2F4F4; }
+  .footer .seguinos {
+    margin-top: 10px; }
+    .footer .seguinos p {
+      font-size: 0.6em; }
+    .footer .seguinos a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      font-size: 0.6em; }
+  .footer .menu ul li {
+    list-style: none; }
+    .footer .menu ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 0.6em; }
+  .footer .copy {
+    margin-top: 80px;
+    font-size: 0.6em; }
+
+/*Main Nosotros*/
+.presentacionNosotros {
+  text-align: center;
+  font-size: 0.8em; }
+  .presentacionNosotros p {
+    font-size: 0.6em; }
+
+.fotoFriends img {
+  border-radius: 30px; }
+
+/*Main Sale*/
+.productosSale {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+.bienvenidosSale h2 {
+  text-align: center; }
+
+.card .tachado {
+  text-decoration: line-through; }
+  .card .tachado p {
+    font-size: large;
+    font-weight: bolder; }
+
+/*Main Productos*/
+.contenedorProductos {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "headerC headerC"
+ "mainProd mainProd"                      
+ "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto fell, 1fr);
+  justify-content: center;
+  gap: 10px; }
+
+.headerC {
+  grid-area: headerC; }
+
+.mainProd {
+  grid-area: mainProd; }
+
+.footer {
+  grid-area: footer; }
+
+.bienvenidosProd {
+  text-align: center; }
+
+.productosProduc {
+  width: 95vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .productosProduc img {
+    width: 100%;
+    height: 220px; }
+.table__cantidad > input {
+  width: 40px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/*Stylo cards*/
+.card h2 {
+  font-size: 1em; }
+
+.card p {
+  font-size: 0.7em; }
+
+.card img {
+  width: 100%;
+  height: 290px; }
+
+/*media queries*/
+@media only screen and (min-width: 600px) {
+  .bienvenidosIndex p {
+    font-size: 1em;
+    margin: 10px 0px 50px 0px; }
+  .tituloMarcas {
+    display: block;
+    text-align: center;
+    margin: 15px 0px 15px 0px; }
+  .marcas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: 20%; }
+  .todoProducto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+    .todoProducto .card {
+      border-style: none;
+      margin: 5px 7px 5px 150px; }
+  .presentacionNosotros {
+    font-size: 0.8em; }
+    .presentacionNosotros p {
+      font-size: 0.8em;
+      margin: 5px 80px 5px 80px; }
+  .footer .seguinos a {
+    font-size: 1em; }
+  .footer p {
+    font-size: 1em;
+    margin-bottom: 0px; } }
+
+@media only screen and (min-width: 770px) {
+  .bienvenidosIndex p {
+    font-size: 1.2em;
+    margin: 10px 0px 50px 0px; }
+  .todoProducto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+    .todoProducto .card {
+      border-style: none;
+      margin: 5px 7px 5px 250px; }
+  .footer .seguinos p {
+    font-size: 1em; }
+  .footer .menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8em; }
+  .footer .copy {
+    margin-top: 80px;
+    font-size: 0.8em; }
+  .footer .seguinos a {
+    font-size: 1.2em; } }
+
+@media only screen and (min-width: 1024px) {
+  .bodyContenedor {
+    display: grid;
+    grid-template-areas: "header header header"
+ "main main main"
+ "footer footer footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr fr;
+    justify-content: center; }
+  .bienvenidosIndex {
+    text-align: center;
+    font-size: 20px; }
+  .tituloMarcas {
+    display: block;
+    text-align: center;
+    margin: 15px 0px 15px 0px; }
+  .marcas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-bottom: 50px; }
+  .todoProducto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .todoProducto .card {
+      border-style: none;
+      margin: 8px 10px 8px 10px; }
+    .todoProducto h3 {
+      text-align: center;
+      margin: 0px 0px 20px 0px; }
+  .presentacionNosotros {
+    font-size: 1em; }
+    .presentacionNosotros p {
+      font-size: 1em;
+      margin: 5px 170px 5px 170px; }
+  .footer .seguinos p {
+    font-size: 1em;
+    margin-bottom: 0px; }
+  .footer .menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    margin-top: 10px; }
+  .footer .copy {
+    margin-top: 90px;
+    font-size: 1em; }
+  .footer .seguinos a {
+    font-size: 1.2em; } }

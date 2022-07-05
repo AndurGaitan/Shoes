@@ -1,0 +1,24 @@
+{
+  "name": "gaitanandres-mishoesb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilo.scss css/stylo.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndurGaitan/MyShoesB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndurGaitan/MyShoesB/issues"
+  },
+  "homepage": "https://github.com/AndurGaitan/MyShoesB#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+@import "utilities/_variables.scss";
+@import "utilities/_mapas.scss";
+
+
+
+//Nav Gral
+/*Navegador general*/
+
+.navbar-brand img {
+    width: 60px;
+    height: 60px;
+}
+
+.color-nav {
+    background-color: $color-menu;
+}
+
+//Body home
+/*Body home*/
+.bodyContenedor {
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;                  
+}
+
+.header {
+    grid-area: header;
+}
+
+.contenedorMain {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+//Main home
+/*Main home*/
+.bienvenidosIndex {
+    text-align: center;
+    font-size: $dimension-chica;
+    margin: 10px 0px 50px 0px;
+}
+
+.todoProducto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    .card {
+        border-style: none;
+        margin: 5px 7px 5px 70px;
+    }
+    h3 {
+        text-align: center;
+    }
+    img {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+.tituloProductos {
+    text-align: center;
+    margin: 15px 0px 15px 0px;
+}
+.marcas {
+    display: none;
+    img {
+        @extend %imagen;
+    }
+}
+
+.tituloMarcas {
+    display: none;
+}
+
+//Footer
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: $color-menu;
+    .seguinos {
+        margin-top: 10px;
+        p {
+            font-size: $dimension-chica;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-size: $dimension-chica;
+        }
+    }
+    .menu {
+        ul {
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: $dimension-chica;
+                }
+            }
+        }
+    }
+    .copy {
+        margin-top: 80px;
+        font-size: $dimension-chica;
+    }
+}
+
+
+
+//Main Nosotros
+/*Main Nosotros*/
+.presentacionNosotros {
+    text-align: center;
+    font-size: 0.8em;
+    p {
+        font-size: $dimension-chica;
+    }
+}
+
+.fotoFriends img {
+    border-radius: 30px;
+}
+
+//Main Sale
+/*Main Sale*/
+.productosSale {
+    @include flex;
+}
+
+.bienvenidosSale {
+    h2 {
+        text-align: center;
+    }
+}
+
+
+.card {
+    .tachado {
+        text-decoration: line-through;
+        p {
+            font-size: large;
+            font-weight: bolder;
+        }
+    }
+}
+
+//Main productos
+/*Main Productos*/
+
+.contenedorProductos {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "headerC headerC"
+                         "mainProd mainProd"                      
+                         "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto fell, 1fr);
+    justify-content: center;
+    gap: 10px;
+}
+
+.headerC {
+    grid-area: headerC;
+}
+
+.mainProd {
+    grid-area: mainProd;
+
+}
+
+.footer {
+    grid-area: footer;
+}
+.bienvenidosProd {
+    text-align: center;
+}
+
+.productosProduc {
+    width: 95vw;
+    @include flex;
+    img {
+        width: 100%;
+        height: 220px;
+    }
+}
+//Estilo cards
+/*Stylo cards*/
+
+.card {
+    h2 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 0.7em;
+    }
+    img {
+        width: 100%;
+        height: 290px;
+    }
+}
+
+
+//Media queries
+/*media queries*/
+@media only screen and (min-width: 600px) {
+    .bienvenidosIndex {
+        p{
+            font-size: 1em;
+            margin: 10px 0px 50px 0px;
+        }
+    }
+
+    .tituloMarcas {
+        display: block;
+        text-align: center;
+        margin: 15px 0px 15px 0px;
+    }
+    .marcas {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-left: 20%;
+        
+    }
+    .todoProducto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        .card {
+            border-style: none;
+            margin: 5px 7px 5px 150px;
+        }
+    }
+
+    .presentacionNosotros {
+        font-size: 0.8em;
+        p {
+            font-size: 0.8em;
+            margin: 5px 80px 5px 80px;
+        }
+    }
+    .footer {
+        .seguinos {
+            a {
+                font-size: 1em;
+            }
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media only screen and (min-width: 770px) {
+    .bienvenidosIndex {
+        p{
+            font-size: 1.2em;
+            margin: 10px 0px 50px 0px;
+        }
+    }
+    .todoProducto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        .card {
+            border-style: none;
+            margin: 5px 7px 5px 250px;
+        }
+    }
+
+    .footer {
+        .seguinos {
+            p {
+                font-size: 1em;
+            }
+        }
+        .menu {
+            ul {
+                li {
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 0.8em; 
+                    }
+                }
+            }
+        }
+        .copy {
+            margin-top: 80px;
+            font-size: 0.8em;
+        }
+        .seguinos {
+            a {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .bodyContenedor {
+        display: grid;
+        grid-template-areas: "header header header"
+                             "main main main"
+                             "footer footer footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr fr;
+        justify-content: center;                  
+    }
+    .bienvenidosIndex {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .tituloMarcas {
+        display: block;
+        text-align: center;
+        margin: 15px 0px 15px 0px;
+    }
+
+    .marcas {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-left: 15%;
+        margin-bottom: 50px;
+    }
+
+    .todoProducto {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .card {
+            border-style: none;
+            margin: 8px 10px 8px 10px;
+        }
+        h3 {
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    .presentacionNosotros {
+        font-size: 1em;
+        p {
+            font-size: 1em;
+            margin: 5px 170px 5px 170px;
+        }
+    }
+
+    .footer {
+        .seguinos {
+            p {
+                font-size: 1em;
+                margin-bottom: 0px;
+            }
+        }
+        .menu {
+            ul {
+                li {
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 1em;
+                        margin-top: 10px; 
+                    }
+                }
+            }
+        }
+        .copy {
+            margin-top: 90px;
+            font-size: 1em;
+        }
+        .seguinos {
+            a {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+

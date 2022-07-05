@@ -1,0 +1,27 @@
+//Mapas
+
+$botoncomun: (
+    color-comun: #fff,
+    bg-comun: #C1FF31,
+    bordercolor-comun: #C1FF31,
+);
+
+$botonsale: (
+    color-sale: #fff,
+    bg-sale: #9CCE28, 
+    bordercolor-sale: #9CCE28, 
+
+);
+
+.btn-Novo {
+    color: map-get($map: $botoncomun, $key: color-comun);
+    background-color: map-get($map: $botoncomun, $key: bg-comun);
+    border-color: map-get($map: $botoncomun, $key: bordercolor-comun);
+}
+
+.btn-sale {
+    color: map-get($map: $botonsale, $key: color-sale);
+    background-color: map-get($map: $botonsale, $key: bg-sale);
+    border-color: map-get($map: $botonsale, $key: bordercolor-sale);
+
+}

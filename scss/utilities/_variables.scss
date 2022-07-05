@@ -1,0 +1,17 @@
+//Variables
+$color-menu: #F2F4F4;
+$dimension-chica: 0.6em;
+
+//Mixins
+
+@mixin flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;   
+}
+
+//Extend 
+%imagen {
+    width: 50%;
+    border-radius: 70px;
+}
